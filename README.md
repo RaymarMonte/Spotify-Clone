@@ -3,8 +3,9 @@ A Spotify clone app that will soothe all your distress away with smooth tunes.
 
 Planning to use the following stack:
 - Node.js - Frontend/Backend connection (Middle tier)
-- React - Frontend UI Library
 - yarn - Package Manager
+- React - Frontend UI Library
+- Next.js - For Server-Side Rendering
 
 
 *Next.js Readme Starts Below*
