@@ -16,6 +16,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+0th step: Run ``yarn install`` first.
+
 First, run the development server:
 
 ```bash
