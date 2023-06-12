@@ -101,7 +101,7 @@ dist
 .vuepress/dist
 
 # vuepress v2.x temp and cache directory
-.temp
+.temp/.
 .cache
 
 # Docusaurus cache and generated files
@@ -125,9 +125,13 @@ dist
 # yarn v2
 .yarn/cache
 .yarn/unplugged
+.yarn/sdks
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
 
 # next-env.d.ts keeps regenerating so better put it in .gitignore
 next-env.d.ts
+
+# ignore vscode settings
+.vscode/
