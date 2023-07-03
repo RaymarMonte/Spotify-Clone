@@ -18,8 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Dashboard />
-        <NowPlayingBar />
+        <div className="flex flex-col h-screen">
+          <div className="grow">
+            <Dashboard />
+          </div>
+          <div className="flex-none">
+            <NowPlayingBar />
+          </div>
+        </div>
       </body>
     </html>
   )

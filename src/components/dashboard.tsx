@@ -1,5 +1,16 @@
+import { SideBar } from "./side-bar/side-bar"
+import { MainView } from "./main-view"
+import SplitPane from "./split-pane"
+
 export function Dashboard() {
     return (
-        <div className="bg-red-500"></div>
+        <SplitPane
+            first={
+                <SideBar />
+            }
+            second={
+                <MainView />
+            }
+        />
     )
 }

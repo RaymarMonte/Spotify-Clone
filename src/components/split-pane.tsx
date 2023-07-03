@@ -29,7 +29,7 @@ export default function SplitPane({
     }
     
     return (
-        <div className="flex w-full h-96"
+        <div className="flex w-full h-full"
             {...(isMouseDown && { onMouseMove: handleDividerMove, onMouseUp: handleEndMove })}
         >
             <div className="grow shrink-0 basis-[300px] flex w-full bg-red-500"

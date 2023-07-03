@@ -1,6 +1,6 @@
 export function NowPlayingBar() {
     return (
-        <div className="fixed bottom-0 bg-orange-500 w-full">
+        <div className="bg-orange-500 w-full h-36">
             <p>Now Playing Bar</p>
         </div>
     )
