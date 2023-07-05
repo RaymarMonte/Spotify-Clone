@@ -1,3 +1,4 @@
+import { Library } from "./library";
 import { Menu } from "./menu";
 
 export function SideBar() {
@@ -5,6 +6,9 @@ export function SideBar() {
         <div className="flex flex-col w-full bg-red-500">
             <div className="flex-none">
                 <Menu />
+            </div>
+            <div className="grow">
+                <Library />
             </div>
         </div>
     )
