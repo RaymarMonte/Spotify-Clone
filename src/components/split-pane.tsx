@@ -32,16 +32,16 @@ export default function SplitPane({
         <div className="flex w-full h-full"
             {...(isMouseDown && { onMouseMove: handleDividerMove, onMouseUp: handleEndMove })}
         >
-            <div className="grow shrink-0 basis-[300px] flex w-full bg-red-500"
+            <div className="grow shrink-0 basis-[300px] w-full bg-red-500"
                 style={firstPaneBasis ? { flexBasis: firstPaneBasis } : {}}
             >
                 {first}
             </div>
             <div onMouseDown={handleDividerMouseDown}
-                className="grow-0 shrink-0 w-1 cursor-col-resize m-0">
+                className="grow-0 shrink-0 w-2 cursor-col-resize m-0">
                 &nbsp;
             </div>
-            <div className="grow-0 shrink overflow-x-auto flex w-full bg-violet-500">
+            <div className="grow-0 shrink overflow-x-auto w-full bg-violet-500">
                 {second}
             </div>
         </div>
