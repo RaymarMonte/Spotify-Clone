@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col h-screen p-2 text-white bg-black">
           <div className="grow">
             <Dashboard />
           </div>
