@@ -6,7 +6,7 @@ export function MainView() {
             <div className="w-full absolute top-0 left-0 right-0">
                 <TopBar />
             </div>
-            <div className="overflow-y-hidden hover:overflow-y-scroll relative h-full divide-y">
+            <div className="overflow-y-hidden hover:overflow-y-scroll gutter-stable relative h-full divide-y">
                 <div className="w-full h-32 flex"></div>
                 <div className="w-full h-32 flex"></div>
                 <div className="w-full h-32 flex"></div>
