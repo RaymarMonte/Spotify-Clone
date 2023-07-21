@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="select-none">
       <body className={inter.className}>
         <div className="flex flex-col h-screen p-2 text-white bg-black">
           <div className="grow">
