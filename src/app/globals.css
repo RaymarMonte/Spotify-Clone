@@ -18,12 +18,37 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b3b3b388;
+}
+
+@layer components {
+  .scrollable {
+    overflow-y: scroll;
+    mask-image: linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 12px, black 12px);
+    mask-size: 100% 20000px;
+    mask-position: left bottom;
+    -webkit-mask-image: linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 12px, black 12px);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+/*   TODO:  https://css-tricks.com/scrollbars-on-hover/  */
+  }
+
+  .scrollable:hover {
+    mask-position: left top;
+    -webkit-mask-position: left top;
+  }
 }
 
 @layer utilities {

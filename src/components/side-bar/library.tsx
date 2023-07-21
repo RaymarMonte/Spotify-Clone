@@ -6,8 +6,7 @@ export function Library() {
                     Your Library
                 </div>
             </div>
-            // TODO: scrollbar-gutter
-            <div className="grow overflow-y-hidden hover:overflow-y-scroll gutter-stable divide-y">
+            <div className="scrollable grow divide-y">
                 <div className="w-full h-32 flex"></div>
                 <div className="w-full h-32 flex"></div>
                 <div className="w-full h-32 flex"></div>
