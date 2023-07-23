@@ -41,18 +41,11 @@ body {
     -webkit-mask-image: linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 12px, black 12px);
     -webkit-mask-size: 100% 20000px;
     -webkit-mask-position: left bottom;
-    transition: mask-position 0.3s, -webkit-mask-position 0.3s;
-/*   TODO:  https://css-tricks.com/scrollbars-on-hover/  */
+    transition: mask-position 0.5s, -webkit-mask-position 0.5s;
   }
 
   .scrollable:hover {
     mask-position: left top;
     -webkit-mask-position: left top;
-  }
-}
-
-@layer utilities {
-  .gutter-stable {
-    scrollbar-gutter: stable;
   }
 }

@@ -3,10 +3,11 @@
 import { useState } from "react";
 
 export default function SplitPane({
-    first, second
+    first, second, firstMinSizeInPX = 0
 }: {
     first: React.ReactNode,
-    second: React.ReactNode
+    second: React.ReactNode,
+    firstMinSizeInPX?: number,
 }) {
     const [isMouseDown, setIsMouseDown] = useState(false);
     const [firstPaneBasis, setFirstPaneBasis] = useState('');
@@ -14,20 +15,22 @@ export default function SplitPane({
     function handleDividerMouseDown(event: React.MouseEvent) {
         setIsMouseDown(true);
     }
-    
+
     function handleDividerMove(event: React.MouseEvent) {
         if (isMouseDown) {
-            setFirstPaneBasis(`${event.clientX}px`);
+            const clientX = event.clientX;
+            const firstPaneBasis = firstMinSizeInPX > clientX ? firstMinSizeInPX : clientX;
+            setFirstPaneBasis(`${firstPaneBasis}px`);
         }
         else {
             handleEndMove(event);
         }
     }
-    
+
     function handleEndMove(event: React.MouseEvent) {
         setIsMouseDown(false);
     }
-    
+
     return (
         <div className="flex w-full h-full"
             {...(isMouseDown && { onMouseMove: handleDividerMove, onMouseUp: handleEndMove })}

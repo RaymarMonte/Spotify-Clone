@@ -11,6 +11,7 @@ export function Dashboard() {
             second={
                 <MainView />
             }
+            firstMinSizeInPX={280}
         />
     )
 }
