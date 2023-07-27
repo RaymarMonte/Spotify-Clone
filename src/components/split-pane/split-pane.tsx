@@ -1,42 +1,41 @@
-'use client'
-
 import { useState } from "react";
 
 export default function SplitPane({
-    first, second, firstMinSizeInPX = 0
+    first, second, moveDivider, dividerXPosInPX
 }: {
     first: React.ReactNode,
     second: React.ReactNode,
-    firstMinSizeInPX?: number,
+    moveDivider: (clientX: number) => void;
+    dividerXPosInPX: number;
 }) {
     const [isMouseDown, setIsMouseDown] = useState(false);
-    const [firstPaneBasis, setFirstPaneBasis] = useState('');
 
     function handleDividerMouseDown(event: React.MouseEvent) {
         setIsMouseDown(true);
     }
 
-    function handleDividerMove(event: React.MouseEvent) {
-        if (isMouseDown) {
-            const clientX = event.clientX;
-            const firstPaneBasis = firstMinSizeInPX > clientX ? firstMinSizeInPX : clientX;
-            setFirstPaneBasis(`${firstPaneBasis}px`);
-        }
-        else {
-            handleEndMove(event);
-        }
+    function handleDividerMouseUp(event: React.MouseEvent) {
+        setIsMouseDown(false);
     }
 
-    function handleEndMove(event: React.MouseEvent) {
-        setIsMouseDown(false);
+    function handleDividerMove(event: React.MouseEvent) {
+        if (isMouseDown) {
+            moveDivider(event.clientX);
+            // const clientX = event.clientX;
+            // const firstPaneBasis = firstMinSizeInPX > clientX ? firstMinSizeInPX : clientX;
+            // setFirstPaneBasis(`${firstPaneBasis}px`);
+        }
+        else {
+            handleDividerMouseUp(event);
+        }
     }
 
     return (
         <div className="flex w-full h-full"
-            {...(isMouseDown && { onMouseMove: handleDividerMove, onMouseUp: handleEndMove })}
+            {...(isMouseDown && { onMouseMove: handleDividerMove, onMouseUp: handleDividerMouseUp })}
         >
             <div className="grow shrink-0 basis-[300px] w-full"
-                style={firstPaneBasis ? { flexBasis: firstPaneBasis } : {}}
+                style={{flexBasis: `${dividerXPosInPX}px`}}
             >
                 {first}
             </div>
