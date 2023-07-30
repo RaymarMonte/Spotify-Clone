@@ -1,9 +1,6 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import { NowPlayingBar } from '@/components/now-playing-bar'
 import { Dashboard } from '@/components/dashboard'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Beat Remedy',
@@ -17,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="select-none">
-      <body className={inter.className}>
+      <body >
         <div className="flex flex-col h-screen p-2 text-white bg-black">
           <div className="grow">
             <Dashboard />
