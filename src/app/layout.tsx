@@ -1,6 +1,10 @@
 import './globals.css'
+import LocalFont from 'next/font/local'
 import { NowPlayingBar } from '@/components/now-playing-bar'
 import { Dashboard } from '@/components/dashboard'
+
+const circular = LocalFont({ src: './my-font.woff2' })
+// var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif))
 
 export const metadata = {
   title: 'Beat Remedy',
