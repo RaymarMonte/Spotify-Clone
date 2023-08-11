@@ -160,13 +160,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:^13.4.13":
-  version: 13.4.13
-  resolution: "@next/font@npm:13.4.13"
-  checksum: 8472cb478ffe77c36e872c33c0faed4a70b6d758b0db54fa4d867fee1e0f7539e5e42fdb3c1d76615e2098f8d4ed4d8b4c1cbcf06baa0977fd57fc504fecf198
-  languageName: node
-  linkType: hard
-
 "@next/swc-darwin-arm64@npm:13.4.4":
   version: 13.4.4
   resolution: "@next/swc-darwin-arm64@npm:13.4.4"
@@ -701,7 +694,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "beat-remedy@workspace:."
   dependencies:
-    "@next/font": ^13.4.13
     "@types/node": 20.2.5
     "@types/react": 18.2.9
     "@types/react-dom": 18.2.4
