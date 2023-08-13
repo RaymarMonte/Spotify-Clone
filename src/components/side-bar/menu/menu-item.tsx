@@ -6,11 +6,11 @@ export function MenuItem({
 }) {
     return (
         <li className="px-3 py-1">
-            <div className="flex gap-5">
+            <div className="flex items-center gap-5 h-10">
                 <svg height="24" width="24" className="fill-white">
                     {icon}
                 </svg>
-                <span>{label}</span>
+                <span className="font-bold text-base">{label}</span>
             </div>
         </li>
     )
