@@ -10,8 +10,14 @@ export default function SplitPane({
 }) {
     const [isMouseDown, setIsMouseDown] = useState(false);
 
+    function isPrimaryMouseButtonClicked(event: React.MouseEvent) {
+        return event.buttons === 1;
+    }
+
     function handleDividerMouseDown(event: React.MouseEvent) {
-        setIsMouseDown(true);
+        if (isPrimaryMouseButtonClicked(event)) {
+            setIsMouseDown(true);
+        }
     }
 
     function handleDividerMouseUp(event: React.MouseEvent) {
@@ -19,7 +25,7 @@ export default function SplitPane({
     }
 
     function handleDividerMove(event: React.MouseEvent) {
-        if (isMouseDown) {
+        if (isPrimaryMouseButtonClicked(event)) {
             moveDivider(event.clientX);
         }
         else {
