@@ -1,6 +1,6 @@
-import { HomeSVGPath } from "./home-svg-path";
+import { HomeSVGPath } from "../../icons/home-svg-path";
 import { MenuItem } from "./menu-item";
-import { SearchSVGPath } from "./search-svg-path";
+import { SearchSVGPath } from "../../icons/search-svg-path";
 
 export function Menu() {
     return (
