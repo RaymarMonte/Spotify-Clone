@@ -1,3 +1,5 @@
+import { NavItem } from "../nav-item"
+
 export const MenuItem = ({
     icon, label, isLabelShown
 }: {
@@ -7,12 +9,7 @@ export const MenuItem = ({
 }) => {
     return (
         <li className="px-3 py-1">
-            <div className="flex items-center gap-5 h-10">
-                <svg height="24" width="24" className="fill-white">
-                    {icon}
-                </svg>
-                {isLabelShown && (<span className="font-bold text-base">{label}</span>)}
-            </div>
+            <NavItem icon={icon} label={label} isLabelShown={isLabelShown} />
         </li>
     )
 }
