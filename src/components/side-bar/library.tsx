@@ -1,3 +1,4 @@
+import { ActivatedLibraryIcon } from "../icons/activated-library-icon";
 import { CreateIcon } from "../icons/create-icon";
 import { GridViewIcon } from "../icons/grid-view-icon";
 import { ReduceIcon } from "../icons/reduce-icon";
@@ -7,8 +8,13 @@ export function Library() {
         <div className="flex flex-col w-full h-0 min-h-full rounded-lg bg-[#121213]">
             <div className="flex-none">
                 <header className="py-2 px-4">
-                    <div className="flex gap-2">
-                        <div></div>
+                    <div className="flex items-center gap-2">
+                        <div className="flex items-center grow shrink-0 py-1 px-2 gap-3 h-10">
+                            <svg height="24" width="24" className="fill-white">
+                                <ActivatedLibraryIcon />
+                            </svg>
+                            <span className="font-bold text-base">Your Library</span>
+                        </div>
                         <div className="p-2">
                             <svg height="16" width="16" className="fill-white">
                                 <CreateIcon />
