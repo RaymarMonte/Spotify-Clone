@@ -1,7 +1,7 @@
-import { ActivatedLibraryIcon } from "../icons/activated-library-icon";
-import { CreateIcon } from "../icons/create-icon";
-import { GridViewIcon } from "../icons/grid-view-icon";
-import { ReduceIcon } from "../icons/reduce-icon";
+import { ActivatedLibraryIcon } from "../svg-paths/activated-library-icon";
+import { CreateIcon } from "../svg-paths/create-icon";
+import { GridViewIcon } from "../svg-paths/grid-view-icon";
+import { ReduceIcon } from "../svg-paths/reduce-icon";
 
 export function Library() {
     return (

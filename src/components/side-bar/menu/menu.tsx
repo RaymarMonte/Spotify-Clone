@@ -1,7 +1,7 @@
-import { HomeIcon } from "../../icons/home-icon";
-import { SearchIcon } from "../../icons/search-icon";
-import { ActivatedHomeIcon } from "@/components/icons/activated-home-icon";
-import { ActivatedSearchIcon } from "@/components/icons/activated-search-icon";
+import { HomeIcon } from "../../svg-paths/home-icon";
+import { SearchIcon } from "../../svg-paths/search-icon";
+import { ActivatedHomeIcon } from "@/components/svg-paths/activated-home-icon";
+import { ActivatedSearchIcon } from "@/components/svg-paths/activated-search-icon";
 import { MenuItem } from "./menu-item";
 import { useState } from "react";
 
