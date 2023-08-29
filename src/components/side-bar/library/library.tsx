@@ -1,8 +1,8 @@
-import { ActivatedLibraryIcon } from "../../svg-paths/activated-library-icon";
-import { CreateIcon } from "../../svg-paths/create-icon";
-import { GridViewIcon } from "../../svg-paths/grid-view-icon";
-import { ReduceIcon } from "../../svg-paths/reduce-icon";
-import { SmallIcon } from "../../utilities/small-icon";
+import { ActivatedLibraryIcon } from "@/components/svg-paths/activated-library-icon";
+import { CreateIcon } from "@/components/svg-paths/create-icon";
+import { GridViewIcon } from "@/components/svg-paths/grid-view-icon";
+import { ReduceIcon } from "@/components/svg-paths/reduce-icon";
+import { SmallIcon } from "@/components/utilities/small-icon";
 
 export function Library() {
     return (

@@ -1,9 +1,9 @@
-import { HomeIcon } from "../../svg-paths/home-icon";
-import { SearchIcon } from "../../svg-paths/search-icon";
 import { ActivatedHomeIcon } from "@/components/svg-paths/activated-home-icon";
 import { ActivatedSearchIcon } from "@/components/svg-paths/activated-search-icon";
 import { MenuItem } from "./menu-item";
 import { useState } from "react";
+import { HomeIcon } from "@/components/svg-paths/home-icon";
+import { SearchIcon } from "@/components/svg-paths/search-icon";
 
 export function Menu() {
     const [isHomeActivated, setIsHomeActivated] = useState(true);

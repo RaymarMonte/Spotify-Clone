@@ -1,4 +1,4 @@
-import { NavItem } from "../nav-item"
+import { NavItem } from "@/components/side-bar/nav-item"
 
 export const MenuItem = ({
     icon, label, isLabelShown
