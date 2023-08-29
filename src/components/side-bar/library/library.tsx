@@ -1,7 +1,8 @@
-import { ActivatedLibraryIcon } from "../svg-paths/activated-library-icon";
-import { CreateIcon } from "../svg-paths/create-icon";
-import { GridViewIcon } from "../svg-paths/grid-view-icon";
-import { ReduceIcon } from "../svg-paths/reduce-icon";
+import { ActivatedLibraryIcon } from "../../svg-paths/activated-library-icon";
+import { CreateIcon } from "../../svg-paths/create-icon";
+import { GridViewIcon } from "../../svg-paths/grid-view-icon";
+import { ReduceIcon } from "../../svg-paths/reduce-icon";
+import { SmallIcon } from "../../utilities/small-icon";
 
 export function Library() {
     return (
@@ -15,21 +16,9 @@ export function Library() {
                             </svg>
                             <span className="font-bold text-base">Your Library</span>
                         </div>
-                        <div className="p-2">
-                            <svg height="16" width="16" className="fill-white">
-                                <CreateIcon />
-                            </svg>
-                        </div>
-                        <div className="p-2">
-                            <svg height="16" width="16" className="fill-white">
-                                <GridViewIcon />
-                            </svg>
-                        </div>
-                        <div className="p-2">
-                            <svg height="16" width="16" className="fill-white">
-                                <ReduceIcon />
-                            </svg>
-                        </div>
+                        <SmallIcon icon={<CreateIcon />} />
+                        <SmallIcon icon={<GridViewIcon />} />
+                        <SmallIcon icon={<ReduceIcon />} />
                     </div>
                 </header>
             </div>

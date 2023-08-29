@@ -1,4 +1,4 @@
-import { Library } from "./library";
+import { Library } from "./library/library";
 import { Menu } from "./menu/menu";
 
 export function SideBar() {
