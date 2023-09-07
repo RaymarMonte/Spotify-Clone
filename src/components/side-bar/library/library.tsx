@@ -1,10 +1,16 @@
 import { ActivatedLibraryIcon } from "@/components/svg-paths/activated-library-icon";
 import { CreateIcon } from "@/components/svg-paths/create-icon";
+import { EnlargeIcon } from "@/components/svg-paths/enlarge-icon";
 import { GridViewIcon } from "@/components/svg-paths/grid-view-icon";
+import { ListViewIcon } from "@/components/svg-paths/list-view-icon";
 import { ReduceIcon } from "@/components/svg-paths/reduce-icon";
 import { SmallIcon } from "@/components/utilities/small-icon";
+import { useState } from "react";
 
 export function Library() {
+    const [isListView, setIsListView] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(true);
+
     return (
         <div className="flex flex-col w-full h-0 min-h-full rounded-lg bg-[#121213]">
             <div className="flex-none">
@@ -17,8 +23,22 @@ export function Library() {
                             <span className="font-bold text-base">Your Library</span>
                         </div>
                         <SmallIcon icon={<CreateIcon />} />
-                        <SmallIcon icon={<GridViewIcon />} />
-                        <SmallIcon icon={<ReduceIcon />} />
+                        {
+                            isExpanded && (
+                                isListView ? (
+                                    <SmallIcon icon={<ListViewIcon />} />
+                                ) : (
+                                    <SmallIcon icon={<GridViewIcon />} />
+                                )
+                            )
+                        }
+                        {
+                            isExpanded ? (
+                                <SmallIcon icon={<ReduceIcon />} />
+                            ) : (
+                                <SmallIcon icon={<EnlargeIcon />} />
+                            )
+                        }
                     </div>
                 </header>
             </div>
